@@ -13,8 +13,7 @@ create table `order`(
     o_date date,
     o_total_price varchar(50),
     
-    foreign key (c_id)
-    references customer(c_id)
+    foreign key (c_id) references customer(c_id)
 );
 
 create table product(
@@ -28,9 +27,8 @@ create table oder_detail(
     p_id int,
     od_qty varchar(50),
     
-    foreign key(o_id)
-    references `order`(o_id),
+    foreign key(o_id) references `order`(o_id),
     
-    foreign key(p_id)
-    references product(p_id)
+    foreign key(p_id) references product(p_id)
+    
 );
