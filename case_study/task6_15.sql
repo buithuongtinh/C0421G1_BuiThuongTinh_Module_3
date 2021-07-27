@@ -91,6 +91,83 @@ inner join hop_dong HD on I.id_nhan_vien = HD.id_nhan_vien
 where year (HD.ngay_lam_hop_dong) in (2018,2019)
 group by HD.id_nhan_vien
 having count(HD.ngay_lam_hop_dong) <= 3;
+-- task 16 Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_SAFE_UPDATES = 0;
+delete NV
+from nhan_vien NV
+inner join hop_dong HD on NV.id_nhan_vien = HD.id_nhan_vien
+where year(HD.ngay_lam_hop_dong) not in (2017, 2018, 2019);
+SET FOREIGN_KEY_CHECKS=1;
+-- task 17 Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ  Platinium lên Diamond, chỉ cập nhật
+--  những khách hàng đã từng đặt phòng với tổng Tiền thanh toán trong năm 2019 là lớn hơn 1000 USD.
+create temporary table temp (
+	select KH.id_khach_hang
+    from khach_hang KH
+    inner join hop_dong HD on KH.id_khach_hang = HD.id_khach_hang
+    inner join loai_khach LK on LK.id_loai_khach = KH.id_loai_khach
+    where year(HD.ngay_lam_hop_dong) = 2019 and HD.tong_tien > 1000 and ten_loai_khach = 'platinium'
+);
+update khach_hang KH 
+set KH.id_loai_khach = 1	
+where KH.id_khach_hang in (
+		select*
+        from temp
+);
+drop table temp ;
+-- task 18 
+-- Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
+SET FOREIGN_KEY_CHECKS=0;
+SET SQL_SAFE_UPDATES = 0;
+delete from khach_hang
+where id_khach_hang in ( 
+select HD.id_khach_hang 
+from hop_dong HD
+where year(ngay_lam_hop_dong) < 2016 );
+SET FOREIGN_KEY_CHECKS=1;
+-- task 19 
+-- Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
+create temporary table temp1(
+select DK.id_dich_vu_di_kem , DK.gia_dich_vu_di_kem, HT.so_luong,  sum(HT.so_luong) as "so_lan_su_dung"
+from dich_vu_di_kem DK
+inner join hop_dong_chi_tiet HT on HT.id_dich_vu_di_kem = DK.id_dich_vu_di_kem
+inner join hop_dong HD on HT.id_hop_dong = HD.id_hop_dong
+where year(HD.ngay_lam_hop_dong)=2019
+group by (id_dich_vu_di_kem));
+select *
+from temp1;
+update dich_vu_di_kem
+set gia_dich_vu_di_kem = gia_dich_vu_di_kem * 2
+where id_dich_vu_di_kem in (select id_dich_vu_di_kem from temp1 where so_lan_su_dung >10);
+drop table temp1;
+
+-- task 20 Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống
+-- , thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
+select id_nhan_vien as id , ho_ten,email_nv as ho_ten ,sdt_nv as sdt ,ngay_sinh_nv as ngay_sinh ,dia_chi_nv as dia_chi
+from nhan_vien 
+union all 
+select id_khach_hang,ho_ten_kh,email_kh,sdt_kh,ngay_sinh_kh,dia_chi_kh
+from khach_hang ;
+-- task 21 Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ
+--  là “Hải Châu” và đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ  với ngày lập hợp đồng là “12/12/2019”
+create view v_nhan_vien as
+select NV.id_nhan_vien, NV.ho_ten,NV.id_vi_tri, NV.id_trinh_do, NV.id_bo_phan, NV.ngay_sinh_nv, NV.so_cmnd_nv, NV.luong_nv ,NV.email_nv, NV.sdt_nv, NV.dia_chi_nv
+from nhan_vien NV 
+inner join hop_dong HD on NV.id_nhan_vien = HD.id_nhan_vien
+where HD.ngay_lam_hop_dong = '2019/12/12'
+group by NV.id_nhan_vien
+having NV.dia_chi_nv ='hai chau';
+select * from v_nhan_vien;
+-- task 22 Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” 
+-- đối với tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+update nhan_vien
+set dia_chi_nv = 'lien chieu'
+where id_nhan_vien in (
+select id_nhan_vien from v_nhan_vien
+);
+select * from v_nhan_vien;
+
+
 
 
  

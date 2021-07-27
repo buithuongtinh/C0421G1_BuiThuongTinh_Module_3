@@ -1,10 +1,13 @@
 use khu_nghi_duong_furama;
--- task 2
+-- task 2 
+-- Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các 
+-- ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.
 select *
 from nhan_vien
-where ho_ten like 'h%' and length(ho_ten) <= 15;
+where (ho_ten like 't%' or ho_ten like 'k%' or ho_ten like 'h%' ) and length(ho_ten) <= 15;
 
--- task 3
+-- task 3 
+-- Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 select*
 from khach_hang
 where ngay_sinh_kh BETWEEN 
