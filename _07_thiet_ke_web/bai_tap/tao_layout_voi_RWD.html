@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;;
+        }
+        @media only screen and (max-width: 768px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+        .menu{
+            font-size: large;
+            font-weight: bold;
+            background-color: black;
+            color: gray;
+            word-spacing:15px;
+
+        }
+        #login{
+           position: absolute;
+            right: 10px;
+        }
+        .dong3{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        .nut1{
+
+            padding:20px 50px 20px 50px;
+            margin-bottom:20px ;
+        }
+        .bg{
+
+            background-color: #F1F1F1 ;
+        }
+        .lk{
+            text-indent: 35px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-12 menu ">
+       Logo  Home  About  Projects  ConTact <span id="login">Login</span>
+    </div>
+</div>
+<div class="row">
+    <div style="height: 500px;" class="col-2 bg" >
+        <div class="col-12 lk">
+            <p> <span style="color: blue">link</span></p>
+            <p> <span style="color: blue">link</span></p>
+            <p> <span style="color: blue">link</span></p>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="col-12">
+            <h1>Welcome</h1>
+            <p>CSS là viết tắt của Cascading Style Sheets, một ngôn ngữ thiết kế đơn giản, xử lý một
+                phần giao diện của trang web.
+                CSS mô tả cách các phần tử HTML hiển thị trên màn hình và các phương tiện khác.
+                Sử dụng CSS, bạn có thể kiểm soát màu chữ, cỡ chữ, kiểu chữ, khoảng cách giữa các
+                đoạn văn bản, kích thước của các thành phần trên trang web, màu nền, thiết kế bố
+                cục và cách trang web hiển thị trên những màn hình có kích thước khác nhau cũng như
+                hàng loạt hiệu ứng khác.CSS rất hữu ích và tiện lợi. Nó có thể kiểm soát tất cả các trang trên một website.
+                Các stylesheet ngoài được lưu trữ dưới dạng các tập tin .CSS. CSS được kết hợp với ngôn ngữ đánh dấu HTML
+            </p>
+            <hr width="100%" align="center" color="grey">
+            <h1>Test</h1>
+            <p>CSS </p>
+        </div>
+    </div>
+    <div style="height: 500px;" class="col-2 bg">
+        <div class="col-12 ">
+            <button class="nut1" >ADS</button>
+
+            <button class="nut1">ADS</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 dong3" > Footer Text</div>
+</div>
+</body>
+</html>
