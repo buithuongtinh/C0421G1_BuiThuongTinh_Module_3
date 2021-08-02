@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .menu {
+            height: 60px;
+            position: relative;
+        }
+
+        .menu .menu-right {
+            width: 500px;
+            right: 0;
+
+            position: absolute;
+        }
+
+        .banner {
+            height: 550px;
+            position: relative;
+        }
+
+        .can .row > * {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .text-in-slide {
+            margin-top: 200px;
+            margin-left: 80px;
+            position: absolute;
+        }
+
+        .link-slide {
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 80px;
+            text-decoration: none;
+        }
+
+        .row .logo-below {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo-below li {
+            margin-right: 40px;
+        }
+
+        .shop-sell {
+            height: 200px;
+        }
+
+        .sell {
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+        }
+
+        .sell .text-sell {
+            position: absolute;
+            margin-top: -70px;
+            margin-left: 253px;
+        }
+
+        .sell .link-sell {
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 800px;
+            text-decoration: none;
+        }
+
+        .more-content {
+            height: 230px;
+
+        }
+
+        .product {
+            height: auto;
+            position: relative;
+        }
+
+        .anh {
+            margin-bottom: 20px;
+            position: relative;
+
+        }
+
+        .content-product {
+            margin-top: -200px;
+            margin-left: 50px;
+            position: absolute;
+
+        }
+
+        .noidung {
+            height: 170px;
+        }
+
+        .banner-card {
+            height: 610px;
+            position: relative;
+        }
+
+        .banner-card .align-card {
+            top: 100px;
+            right: 50px;
+            position: absolute;
+        }
+
+        .can-giua {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .can-giua a {
+            text-decoration: none;
+        }
+
+        .four-icon .icon {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer{
+            height: 280px;
+
+        }
+        .footer ul li {
+            list-style-type: none;
+            line-height: 35px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row menu">
+        <div class="col-7">
+            <div class="col-12">
+                <ul class="navbar nav-item me-auto " style="list-style-type: none">
+                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                         alt="" width="120px" height="auto">
+                    <li style="font-weight: bold">Surface</li>
+                    <li>Computer</li>
+                    <li>Computer for Business</li>
+                    <li>Acessories</li>
+                    <li>Shop now</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-5">
+            <div class="row ">
+                <div class="menu-right">
+                    <div class="col-12 menuBenphai">
+                        <ul class="navbar nav-item" style="list-style-type: none">
+                            <li>All Microsorf</li>
+                            <li>Search
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-search " viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </li>
+                            <li>Card
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-cart " viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </li>
+                            <li>Sign in
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                     class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path fill-rule="evenodd"
+                                          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="can">
+        <div class="row banner" style="">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide "
+                     style="width: 100%;height: 550px;overflow: hidden" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <span class="text-in-slide">Save big on light and powerful<br/>
+                            Surface devices designed for <br/>
+                            learning at home, in the classroom and on the go.</span>
+                            <a href="# " class="link-slide">Shop deals
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </a>
+                            <img scr="img/mcr1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                           <span class="text-in-slide">Microsoft’s laptops , 2-in-1’s,<br/>
+                            and accessories <br/> are uniquely designed to fuel your
+                               <br/>originality, creativity, and productivity.</span>
+                            <a href="#" class="link-slide">Expore
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </a>
+                            <img src="img/mcr2.jpg" class="d-block w-100" alt="...">
+
+
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <ul class="navbar nav-item  logo-below" style="list-style-type: none">
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                         class="bi bi-laptop" viewBox="0 0 16 16">
+                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                         class="bi bi-laptop-fill" viewBox="0 0 16 16">
+                        <path d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                         class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                         class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                    </svg>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                         class="bi bi-briefcase" viewBox="0 0 16 16">
+                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row shop-sell">
+        <div class="col-12">
+            <div class="card sell" style="width: 60rem;">
+                <img src="img/sell1.png" alt="" width="320px" height="auto">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="text-sell">Up to $150 off Surface Laptop Go <br/>Portable meets affordable in this
+                            backpack-ready, budget-friendly PC.</p>
+                        <a href="#" class="link-sell">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center more-content">
+        <div class="col-12">
+            <h1>Original by design</h1>
+            <p style="text-align: center">Whether you do your best thinking at home or in nature, alone or with others,
+                every Surface has been designed to fuel<br/> your originality. You never know where your next
+                inspiration will come from. Check out these true originals and their<br/> stories.</p>
+            <a href="#" style="text-decoration: none">Meet out Surface originals
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="row product">
+        <div class="col-6">
+            <div class="row anh" style="">
+                <div class="col-12">
+                    <img src="img/product1.jpg" alt="" class="product-img"
+                         style="width: 100%;height: auto;overflow: hidden">
+                    <div class="content-product">
+                        <h1>Surface Laptop Go</h1>
+                        <p>Sleek, light, and a standout value, with 12.4” touchscreen</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product2.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Go 2</h1>
+                        <p>Smallest, lightest Surface with 10.5” touchscreen*</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product3.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Book 3</h1>
+                        <p>Our most powerful 13.5” or 15” touchscreen laptop</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product4.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Pro X</h1>
+                        <p>Edge to edge 2-in-1 laptop with LTE and 13” touchscreen*</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product5.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Laptop Go</h1>
+                        <p>Sleek, light, and a standout value, with 12.4” touchscreen</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product6.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Laptop Go</h1>
+                        <p>Sleek, light, and a standout value, with 12.4” touchscreen</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product7.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Laptop Go</h1>
+                        <p>Sleek, light, and a standout value, with 12.4” touchscreen</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="row anh">
+                <div class="col-12">
+                    <img src="img/product8.jpg" alt=""
+                         style="width: 100%;height: auto;overflow: hidden;margin-left: auto;margin-right:auto">
+                    <div class="content-product">
+                        <h1>Surface Laptop Go</h1>
+                        <p>Sleek, light, and a standout value, with 12.4” touchscreen</p>
+                        <a href="#">Meet Surface Laptop Go
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="row noidung">
+        <div class="col-12 text-center">
+
+            <h1>Original by design, inspired by you</h1>
+            <p>Inspiration can come from anywhere. Originality is where you take it.</p>
+            <a href="#" style="text-decoration: none">Meet our Surface originals
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <video width="100%" height="750px" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+            </video>
+        </div>
+    </div>
+
+    <div class="row banner-card">
+        <div class="col-12">
+            <div class="">
+                <img src="img/banner.jpg" alt="" width="100%">
+                <div class="card align-card " style="width: 20rem;height: 300px">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p class="text-center">Choose your perfect Surface</p>
+                            <p class="text-center">Just answer a few simple questions about what you're looking for and
+                                we'll help you choose. Or compare tech specs of each computer and find the Surface built
+                                to unlock your originality.</p>
+                            <a href="#" style="text-decoration: none">Help me choose
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </a>
+                            <br/>
+                            <a href="#" style="text-decoration: none">Compare Surface
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row card-end">
+        <div class="col-4">
+            <div class="card can-giua  " style="width: 25rem; overflow: hidden">
+                <img src="img/c1.jpg" alt="" width="400px" height="auto">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Protect your Surface</p>
+                        <p class=""><a href="#">See Microsoft Complete protection plans
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card can-giua " style="width: 25rem; overflow: hidden">
+                <img src="img/c2.jpg" alt="" width="400px" height="auto">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Protect your Surface</p>
+                        <p class=""><a href="#">Shop for Business
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card can-giua" style="width: 25rem; overflow: hidden">
+                <img src="img/c3.jpg" alt="" width="400px" height="auto">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Protect your Surface</p>
+                        <p class=""><a href="#">Shop Surface accessories
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="row footer" style="background:#F2F2F2 ">
+        <div class="col-2">
+            <ul>
+                <li>What's new</li>
+                <li>Surface Laptop 4</li>
+                <li>Surface Laptop Go</li>
+                <li>Surface Go 2</li>
+                <li>Surface Pro X</li>
+                <li>Surface Duo</li>
+                <li>Microsoft 365</li>
+                <li>Windows 10 apps</li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <ul>
+                <li>What's new</li>
+                <li>Surface Laptop 4</li>
+                <li>Surface Laptop Go</li>
+                <li>Surface Go 2</li>
+                <li>Surface Pro X</li>
+                <li>Surface Duo</li>
+                <li>Microsoft 365</li>
+                <li>Windows 10 apps</li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <ul>
+                <li>What's new</li>
+                <li>Surface Laptop 4</li>
+                <li>Surface Laptop Go</li>
+                <li>Surface Go 2</li>
+                <li>Surface Pro X</li>
+                <li>Surface Duo</li>
+                <li>Microsoft 365</li>
+                <li>Windows 10 apps</li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <ul>
+                <li>What's new</li>
+                <li>Surface Laptop 4</li>
+                <li>Surface Laptop Go</li>
+                <li>Surface Go 2</li>
+                <li>Surface Pro X</li>
+                <li>Surface Duo</li>
+                <li>Microsoft 365</li>
+                <li>Windows 10 apps</li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <ul>
+                <li>What's new</li>
+                <li>Surface Laptop 4</li>
+                <li>Surface Laptop Go</li>
+                <li>Surface Go 2</li>
+                <li>Surface Pro X</li>
+                <li>Surface Duo</li>
+                <li>Microsoft 365</li>
+                <li>Windows 10 apps</li>
+            </ul>
+        </div>
+
+        <div class="col-2">
+            <ul>
+                <li>What's new</li>
+                <li>Surface Laptop 4</li>
+                <li>Surface Laptop Go</li>
+                <li>Surface Go 2</li>
+                <li>Surface Pro X</li>
+                <li>Surface Duo</li>
+                <li>Microsoft 365</li>
+                <li>Windows 10 apps</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
