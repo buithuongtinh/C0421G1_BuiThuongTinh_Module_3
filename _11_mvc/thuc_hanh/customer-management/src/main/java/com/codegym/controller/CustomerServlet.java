@@ -1,6 +1,5 @@
 package com.codegym.controller;
 
-
 import com.codegym.model.Customer;
 import com.codegym.service.CustomerService;
 import com.codegym.service.CustomerServiceImpl;
@@ -17,15 +16,14 @@ import java.util.List;
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 public class CustomerServlet extends HttpServlet {
 
-    private final CustomerService customerService = new CustomerServiceImpl();
+    private CustomerService customerService = new CustomerServiceImpl();
 
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if (action == null) {
+        if(action == null){
             action = "";
         }
-        switch (action) {
+        switch (action){
             case "create":
                 createCustomer(request, response);
                 break;
@@ -63,7 +61,7 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if (customer == null) {
+        if(customer == null){
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             customer.setName(name);
@@ -87,7 +85,7 @@ public class CustomerServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        int id = (int) (Math.random() * 10000);
+        int id = (int)(Math.random() * 10000);
 
         Customer customer = new Customer(id, name, email, address);
         this.customerService.save(customer);
@@ -102,13 +100,12 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if (action == null) {
+        if(action == null){
             action = "";
         }
-        switch (action) {
+        switch (action){
             case "create":
                 showCreateForm(request, response);
                 break;
@@ -150,7 +147,7 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if (customer == null) {
+        if(customer == null){
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("customer", customer);
@@ -169,7 +166,7 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if (customer == null) {
+        if(customer == null){
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("customer", customer);

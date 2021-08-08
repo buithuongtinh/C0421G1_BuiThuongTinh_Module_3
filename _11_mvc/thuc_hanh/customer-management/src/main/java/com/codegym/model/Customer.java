@@ -48,5 +48,3 @@ public class Customer {
         this.address = address;
     }
 }
-
-
